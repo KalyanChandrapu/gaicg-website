@@ -1,0 +1,44 @@
+{
+  "generated": "2026-11-09",
+  "note": "Scanner output. Entries are added only when linked to an official source. Entries with verified: false have not been reviewed by a member.",
+  "entries": [
+    {
+      "id": "eu-draft-high-risk-classification-2026",
+      "publishedDate": "2026-05-19",
+      "region": "Europe",
+      "jurisdiction": "European Union",
+      "body": "European Commission",
+      "title": "Draft Commission guidelines on the classification of high-risk AI systems",
+      "type": "consultation",
+      "status": "draft",
+      "effective": "Not stated. Draft last updated 2026-07-23.",
+      "summary": "Draft Commission guidance on which AI systems count as high-risk under the EU AI Act, with sections on general principles and Annexes I and III. The document is a draft and is not legally binding.",
+      "source": "https://digital-strategy.ec.europa.eu/en/library/draft-commission-guidelines-classification-high-risk-ai-systems",
+      "lastChecked": "2026-11-09",
+      "verified": false
+    },
+    {
+      "id": "eu-ai-act-transparency-rules-2026-08-02",
+      "publishedDate": "2026-08-02",
+      "region": "Europe",
+      "jurisdiction": "European Union",
+      "body": "European Commission",
+      "title": "Safer and more transparent AI: new transparency rules for AI systems take effect",
+      "type": "guideline",
+      "status": "enacted",
+      "effective": "2026-08-02",
+      "summary": "Transparency rules for AI systems took effect on 2026-08-02. Certain AI-generated or manipulated content must be labelled with machine-readable marks, and users must be told when they are interacting with an AI system. The Commission has published guidelines to help providers and deployers comply; the article does not say whether they are final.",
+      "source": "https://commission.europa.eu/news-and-media/news/safer-and-more-transparent-ai-2026-08-02_en",
+      "lastChecked": "2026-11-09",
+      "verified": false
+    }
+  ],
+  "skipped": [
+    {"reason": "Official source could not be fetched (HTTP 403)", "item": "India MeitY AI governance guidelines and 2026 RBI/SEBI notifications"},
+    {"reason": "Official source could not be fetched (HTTP 403)", "item": "UK ICO agentic AI and ADM guidance timing"},
+    {"reason": "Connection reset; no official page retrieved", "item": "Saudi SDAIA Responsible AI policy and deepfake guidelines"},
+    {"reason": "Redirected to an unblock page; not followed", "item": "US federal AI notices (Federal Register)"},
+    {"reason": "Secondary sources only; no official confirmation", "item": "UAE and Saudi joint harmonisation initiative; UAE agentic AI framework"},
+    {"reason": "Secondary sources disagree on dates; no official confirmation", "item": "US state AI law effective dates (Colorado, New York RAISE)"}
+  ]
+}

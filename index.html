@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Global AI Compliance Guild | AI Regulatory Compliance</title>
+<meta name="description" content="Global AI Compliance Guild is an independent practitioner group turning AI regulation into practical controls, evidence and assurance.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%20width%3D%22512%22%20height%3D%22512%22%3E%20%20%3Crect%20width%3D%22512%22%20height%3D%22512%22%20fill%3D%22%231A1A1A%22/%3E%20%20%3Cpath%20d%3D%22M256%2092%20L384%20136%20V256%20C384%20338%20328%20398%20256%20424%20C184%20398%20128%20338%20128%20256%20V136%20Z%22%20fill%3D%22none%22%20stroke%3D%22%23FFFFFF%22%20stroke-width%3D%2214%22%20stroke-linejoin%3D%22round%22/%3E%20%20%3Cg%20stroke%3D%22%23FFFFFF%22%20stroke-width%3D%2210%22%20stroke-opacity%3D%220.6%22%20stroke-linecap%3D%22round%22%3E%20%20%20%20%3Cline%20x1%3D%22256%22%20y1%3D%22262%22%20x2%3D%22196%22%20y2%3D%22202%22/%3E%20%20%20%20%3Cline%20x1%3D%22256%22%20y1%3D%22262%22%20x2%3D%22316%22%20y2%3D%22202%22/%3E%20%20%20%20%3Cline%20x1%3D%22256%22%20y1%3D%22262%22%20x2%3D%22196%22%20y2%3D%22330%22/%3E%20%20%20%20%3Cline%20x1%3D%22256%22%20y1%3D%22262%22%20x2%3D%22316%22%20y2%3D%22330%22/%3E%20%20%3C/g%3E%20%20%3Cg%20fill%3D%22%23FFFFFF%22%3E%20%20%20%20%3Ccircle%20cx%3D%22196%22%20cy%3D%22202%22%20r%3D%2213%22/%3E%20%20%20%20%3Ccircle%20cx%3D%22316%22%20cy%3D%22202%22%20r%3D%2213%22/%3E%20%20%20%20%3Ccircle%20cx%3D%22196%22%20cy%3D%22330%22%20r%3D%2213%22/%3E%20%20%20%20%3Ccircle%20cx%3D%22316%22%20cy%3D%22330%22%20r%3D%2213%22/%3E%20%20%3C/g%3E%20%20%3Ccircle%20cx%3D%22256%22%20cy%3D%22262%22%20r%3D%2224%22%20fill%3D%22%23F5A623%22/%3E%3C/svg%3E" type="image/svg+xml">
+<style>
+  :root {
+    --bg: #FFFFFF;
+    --surface: #F5F5F5;
+    --ink: #1A1A1A;
+    --muted: #5A5A5A;
+    --accent: #B86E00;
+    --rule: #DDDDDD;
+    --dark: #1A1A1A;
+    --dark-text: #FFFFFF;
+    --dark-accent: #F5A623;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141414;
+      --surface: #1F1F1F;
+      --ink: #F2F2F2;
+      --muted: #A8A8A8;
+      --accent: #F5A623;
+      --rule: #333333;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141414;
+    --surface: #1F1F1F;
+    --ink: #F2F2F2;
+    --muted: #A8A8A8;
+    --accent: #F5A623;
+    --rule: #333333;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+  }
+  header.site {
+    background: var(--dark);
+    color: var(--dark-text);
+    padding: 16px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; }
+  header.site .wrap { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .brand { font-weight: 700; letter-spacing: 0.04em; color: var(--dark-text); text-decoration: none; }
+  .brand span { color: var(--dark-accent); }
+  nav a { color: var(--dark-text); text-decoration: none; margin-left: 18px; font-size: 15px; }
+  nav a:hover { color: var(--dark-accent); }
+  section { padding: 56px 20px; border-bottom: 1px solid var(--rule); }
+  section:nth-of-type(even) { background: var(--surface); }
+  h1 { font-size: 40px; line-height: 1.15; margin: 0 0 16px; }
+  h2 { font-size: 28px; margin: 0 0 16px; }
+  h3 { font-size: 18px; margin: 24px 0 8px; }
+  p { margin: 0 0 14px; max-width: 70ch; }
+  .lede { font-size: 20px; color: var(--ink); }
+  .eyebrow { color: var(--accent); font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 10px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 20px; }
+  .card { background: var(--bg); border: 1px solid var(--rule); border-top: 4px solid var(--accent); padding: 20px; }
+  .card h3 { margin-top: 0; }
+  .status { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 8px; border: 1px solid var(--accent); color: var(--accent); margin-bottom: 10px; }
+  ul.clean { padding-left: 20px; margin: 0 0 14px; }
+  ul.clean li { margin-bottom: 6px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 15px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  th { color: var(--muted); font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .notice { border-left: 4px solid var(--accent); padding: 14px 18px; background: var(--surface); margin: 24px 0; max-width: 70ch; }
+  footer { padding: 32px 20px; color: var(--muted); font-size: 14px; }
+  footer a { color: var(--accent); }
+  @media (max-width: 640px) {
+    h1 { font-size: 30px; }
+    h2 { font-size: 24px; }
+    nav a { margin-left: 12px; font-size: 14px; }
+    section { padding: 40px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top" style="display: flex; align-items: center; gap: 12px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="40" height="40" role="img" aria-label="" style="display:block;flex:none;">  <rect width="512" height="512" fill="#1A1A1A"/>  <path d="M256 92 L384 136 V256 C384 338 328 398 256 424 C184 398 128 338 128 256 V136 Z" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linejoin="round"/>  <g stroke="#FFFFFF" stroke-width="10" stroke-opacity="0.6" stroke-linecap="round">    <line x1="256" y1="262" x2="196" y2="202"/>    <line x1="256" y1="262" x2="316" y2="202"/>    <line x1="256" y1="262" x2="196" y2="330"/>    <line x1="256" y1="262" x2="316" y2="330"/>  </g>  <g fill="#FFFFFF">    <circle cx="196" cy="202" r="13"/>    <circle cx="316" cy="202" r="13"/>    <circle cx="196" cy="330" r="13"/>    <circle cx="316" cy="330" r="13"/>  </g>  <circle cx="256" cy="262" r="24" fill="#F5A623"/></svg>Global AI Compliance Guild</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#charter">Charter</a>
+      <a href="#members">Members</a>
+      <a href="#register">Register</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section id="home">
+    <div class="wrap">
+      <div class="eyebrow">Independent practitioner group</div>
+      <h1>Turning AI regulation into controls you can actually test.</h1>
+      <p class="lede">Global AI Compliance Guild is an independent group of compliance practitioners, risk experts and technologists. We map AI obligations across jurisdictions, translate them into practical controls, and publish guidance that organisations can check against their own work.</p>
+      <p><a href="#publications" style="color: var(--accent); font-weight: 700;">Read our publications</a> &nbsp;·&nbsp; <a href="#register" style="color: var(--accent); font-weight: 700;">Browse the regulatory register</a> &nbsp;·&nbsp; <a href="#contact" style="color: var(--accent); font-weight: 700;">Get involved</a></p>
+      <div class="notice">
+        <strong>Not legal advice.</strong> Global AI Compliance Guild publications are general guidance prepared by practitioners. They do not constitute legal advice, certification or regulatory opinion. Organisations should take qualified advice on their own obligations.
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="eyebrow">About</div>
+      <h2>Why Global AI Compliance Guild exists</h2>
+      <p>AI is being adopted quickly across financial services, healthcare and other regulated sectors. Governance requirements are arriving from many directions at once, and implementation guidance is fragmented. Organisations are left to translate regulatory intent into technical controls on their own.</p>
+      <p>Global AI Compliance Guild exists to close that gap, slowly and carefully, with work that can be checked.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Independent</h3>
+          <p>No single organisation's product or commercial interest shapes our output.</p>
+        </div>
+        <div class="card">
+          <h3>Sourced</h3>
+          <p>Every regulatory statement cites its primary source and version date.</p>
+        </div>
+        <div class="card">
+          <h3>Versioned</h3>
+          <p>Every publication carries a version number, an effective date and a change log.</p>
+        </div>
+        <div class="card">
+          <h3>Corrected in public</h3>
+          <p>Errors are fixed and recorded in the change log, not quietly replaced.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="charter">
+    <div class="wrap">
+      <div class="eyebrow">Charter</div>
+      <h2>What we do, and how we work</h2>
+      <p><span class="status">Draft v0.1</span></p>
+
+      <h3>Purpose</h3>
+      <p>To help organisations understand and implement AI compliance requirements through sourced, practical and independently produced guidance.</p>
+
+      <h3>Scope</h3>
+      <ul class="clean">
+        <li><strong>Geographies:</strong> India, United Kingdom, European Union, United States, and the Middle East (first named jurisdictions to be confirmed).</li>
+        <li><strong>Sectors:</strong> financial services first; healthcare to follow.</li>
+        <li><strong>Reference frameworks:</strong> NIST AI Risk Management Framework and ISO/IEC 42001, treated as voluntary standards.</li>
+      </ul>
+
+      <h3>Workstreams</h3>
+      <ul class="clean">
+        <li><strong>Regulatory register:</strong> a versioned record of AI obligations, their status, applicability and sources.</li>
+        <li><strong>Control framework:</strong> controls mapped to the register, linking regulation, obligation, control, evidence and test.</li>
+        <li><strong>Assurance model:</strong> test procedures, evidence expectations and a maturity scale.</li>
+        <li><strong>Publications:</strong> one whitepaper per quarter, with shorter guidance notes in between.</li>
+      </ul>
+
+      <h3>Working model</h3>
+      <ul class="clean">
+        <li>The group meets fortnightly.</li>
+        <li>Decisions are made by consensus. Where consensus fails, the convenor decides and records the reasoning.</li>
+        <li>Roles rotate, and written processes cover publishing, review and correction.</li>
+        <li>Members participate in a personal capacity. Members must not discuss pricing, customers or competitive strategy of their employers.</li>
+      </ul>
+
+      <h3>Review</h3>
+      <p>The charter is reviewed annually. If a quarter passes without a publication or register update, the group meets to decide whether to continue, change scope or pause.</p>
+    </div>
+  </section>
+
+  <section id="members">
+    <div class="wrap">
+      <div class="eyebrow">Members</div>
+      <h2>Who is involved</h2>
+      <p>Global AI Compliance Guild is run by practitioners who volunteer their time. Members are listed here with their agreement.</p>
+      <table>
+        <thead>
+          <tr><th>Member</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Kalyan Chandrapu</td><td>Founding member and convenor</td></tr>
+          <tr><td>Sudha Kiran Pentela</td><td>Founding member and convenor</td></tr>
+          <tr><td>Vivek Aggarwal</td><td>Founding member and convenor</td></tr>
+          <tr><td>Suresh Chandra</td><td>Founding member and convenor</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top: 20px;"><strong>Join us.</strong> We are looking for practitioners in each jurisdiction, and for people who can test our guidance against real work. <a href="#contact" style="color: var(--accent);">Get in touch.</a></p>
+    </div>
+  </section>
+
+  <section id="register">
+    <div class="wrap">
+      <div class="eyebrow">Regulatory register</div>
+      <h2>Live register of AI obligations</h2>
+      <p><span class="status">Version 0.1 · In preparation</span></p>
+      <p>The register records each AI obligation by jurisdiction, with its status, applicability, effective date and primary source. Entries are added only after they have been checked against the source. Version 0.1 will be published once the first jurisdiction has been reviewed.</p>
+      <p><a href="https://claude.ai/artifact/XkBsTZpQP8avuMJtD6G9QD?sk=vwO8q39gu2Q_FHlcfUBPfQ" style="color: var(--accent); font-weight: 700;">Open the AI regulatory tracker</a> (working log of recent regulatory activity; not yet reviewed against the sources)</p>
+      <h3>Latest regulatory items</h3>
+      <p style="color: var(--muted); font-size: 14px;">Items are added only when linked to an official source. Entries marked as unverified have not yet been reviewed by a member.</p>
+      <div id="scanner-register"><p style="color: var(--muted);">Loading latest items&hellip;</p></div>
+
+      <h3>Entry 1: Digital Personal Data Protection Act, 2023 (India)</h3>
+      <table>
+        <tbody>
+          <tr><td><strong>Instrument</strong></td><td>Digital Personal Data Protection Act, 2023 (Act No. 22 of 2023), and Digital Personal Data Protection Rules, 2025</td></tr>
+          <tr><td><strong>Regulator</strong></td><td>Data Protection Board of India</td></tr>
+          <tr><td><strong>Status</strong></td><td>Enacted. The Rules were notified in November 2025 and the Act's obligations take effect in phases over about 18 months. The final compliance date is around May 2027; sources differ by a day, so confirm against the notification.</td></tr>
+          <tr><td><strong>Applicability</strong></td><td>Processing of digital personal data in India, and processing outside India connected with offering goods or services to people in India (S.3). Applies to Data Fiduciaries, Significant Data Fiduciaries, Data Processors and Consent Managers.</td></tr>
+          <tr><td><strong>Primary source</strong></td><td>Act No. 22 of 2023, Gazette of India. Link to be added.</td></tr>
+          <tr><td><strong>Last checked</strong></td><td>5 November 2026, against the Act text as recorded in the group's working register. Gazette check outstanding.</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top: 16px;"><strong>Key obligations (Data Fiduciary)</strong></p>
+      <table>
+        <thead>
+          <tr><th>Section</th><th>Obligation</th><th>Type</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>S.4</td><td>Process personal data only for a lawful purpose, on consent or on a legitimate use under S.7</td><td>Mandatory</td></tr>
+          <tr><td>S.5</td><td>Give a notice with, or before, each consent request, in the prescribed form</td><td>Mandatory</td></tr>
+          <tr><td>S.6</td><td>Obtain consent that is free, specific, informed, unconditional and unambiguous. Allow withdrawal as easily as consent was given. Stop processing after withdrawal.</td><td>Mandatory</td></tr>
+          <tr><td>S.6(10)</td><td>Be able to prove that valid notice and consent were given</td><td>Mandatory</td></tr>
+          <tr><td>S.7</td><td>Legitimate uses without consent (voluntary provision, State functions, legal obligations, medical emergencies, employment). These are alternative bases, not additional duties. Determine which basis applies before assessing obligations.</td><td>Non-mandatory (basis)</td></tr>
+          <tr><td>S.8(1)</td><td>Remain responsible for compliance, including for processing done by a Data Processor</td><td>Mandatory</td></tr>
+          <tr><td>S.8(5)</td><td>Protect personal data with reasonable security safeguards</td><td>Mandatory</td></tr>
+          <tr><td>S.8(6)</td><td>Notify the Board and each affected Data Principal of a personal data breach, in the prescribed manner. Timing and content are set by the Rules and are not yet recorded in this entry.</td><td>Mandatory</td></tr>
+          <tr><td>S.8(7)</td><td>Erase personal data when its purpose is served or consent is withdrawn, unless retention is required by law</td><td>Mandatory</td></tr>
+          <tr><td>S.9</td><td>For children, obtain verifiable parental consent. Do not carry out tracking, behavioural monitoring or targeted advertising directed at children.</td><td>Mandatory</td></tr>
+          <tr><td>S.10</td><td>For Significant Data Fiduciaries only: appoint a DPO based in India, appoint an independent data auditor, and carry out periodic Data Protection Impact Assessments</td><td>Mandatory (if notified)</td></tr>
+          <tr><td>S.11 to S.14</td><td>Honour Data Principal rights: access, correction and erasure, grievance redressal and nomination</td><td>Mandatory</td></tr>
+          <tr><td>S.16</td><td>Do not transfer personal data to countries the Central Government restricts</td><td>Mandatory</td></tr>
+          <tr><td>S.17</td><td>Exemptions. Each exemption applies only where its stated conditions are met. Read the clause in full; conditions are not summarised here.</td><td>Non-mandatory</td></tr>
+          <tr><td>S.33 and Schedule</td><td>Penalties. Amounts to be verified against the Schedule text before publication.</td><td>n/a</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top: 16px; color: var(--muted); font-size: 14px;"><strong>Gaps in this entry:</strong> the Rules prescribe breach-reporting detail, notice content, and the Significant Data Fiduciary classification process. These are not yet extracted and are the next priority for this entry.</p>
+
+      <h3>Entry 2: Model Risk Management guidance (RBI, draft 2026)</h3>
+      <table>
+        <tbody>
+          <tr><td><strong>Instrument</strong></td><td>Guidance on Regulatory Principles for Model Risk Management, 2026 (draft). Press Release 2026-2027/528, 24 June 2026. The circular number is not yet assigned in the draft.</td></tr>
+          <tr><td><strong>Regulator</strong></td><td>Reserve Bank of India</td></tr>
+          <tr><td><strong>Status</strong></td><td><span class="status">Draft for consultation</span> The comment period closed on 24 July 2026. This entry does not confirm whether a final version has been issued. Check the RBI website before relying on it.</td></tr>
+          <tr><td><strong>Applicability</strong></td><td>Paragraph 4 lists commercial banks (including foreign banks), small finance banks, payments banks, local area banks, regional rural banks, urban and rural co-operative banks, NBFCs (base, middle, upper and top layers), all-India financial institutions, asset reconstruction companies and credit information companies. Some press coverage describes a narrower scope. Paragraph 4 governs.</td></tr>
+          <tr><td><strong>Effective date</strong></td><td>Not stated in the draft</td></tr>
+          <tr><td><strong>Relationship to other rules</strong></td><td>Read with RBI Directions. Where they conflict, the Directions prevail (para 5). Applies to all models, whether built internally or bought from third parties (para 6). On final issue, supersedes Chapter 3 of the 2002 Guidance Note on Credit Risk Management (para 64).</td></tr>
+          <tr><td><strong>Primary source</strong></td><td>RBI draft text, 16 pages. Link to the RBI press release to be added.</td></tr>
+          <tr><td><strong>Last checked</strong></td><td>5 November 2026, against the draft text. The draft says further AI requirements may follow (para 2), so this entry will need a further review.</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top: 16px;"><strong>Key AI provisions (Chapter V.B) and related paragraphs</strong></p>
+      <table>
+        <thead>
+          <tr><th>Paragraph</th><th>Requirement</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>9</td><td>A Board-approved MRMF must cover AI and ML models, whatever their source</td></tr>
+          <tr><td>17 to 20</td><td>Risk-tier all models, review tiers at least annually. A low-complexity score must not reduce the tier of a material model.</td></tr>
+          <tr><td>29 to 33</td><td>Independent validation by the RE before and after deployment, after changes, and periodically</td></tr>
+          <tr><td>45 to 48</td><td>Third-party models: the RE stays accountable, validates independently regardless of the provider's assurance, and has due diligence, documentation and audit rights in contracts</td></tr>
+          <tr><td>49 to 51</td><td>Define the scope of AI and ML models, including foundation and frontier models. Deploy only where the risk can be managed.</td></tr>
+          <tr><td>52</td><td>Consider reliance on model outputs and the level of autonomy when tiering AI models</td></tr>
+          <tr><td>54</td><td>Set explainability thresholds and apply higher ones to material decisions. Control hallucinations. Test for bias and fairness. Monitor for overfitting and data or concept drift.</td></tr>
+          <tr><td>55 and 56</td><td>Red-teaming for customer-facing and generative models. Strict controls over automatic model updates.</td></tr>
+          <tr><td>57</td><td>Enhanced documentation for traceability, reproducibility and auditability</td></tr>
+          <tr><td>58 and 59</td><td>Deployment safeguards, including controls against prompt injection. Disclose to customers that they are interacting with AI. Offer a route to a human.</td></tr>
+          <tr><td>60 to 63</td><td>Human oversight, including override and kill-switch mechanisms, and guarding against automation bias</td></tr>
+          <tr><td>25</td><td>Do not use any model that harms consumers. Grievance redressal must cover consumer-facing models.</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top: 16px; color: var(--muted); font-size: 14px;"><strong>Note on sources:</strong> this entry is based only on the published draft. No consultation submission has been used. Paragraph references are to the draft and may change in the final text.</p>
+
+      <h3>Fields in each entry</h3>
+      <table>
+        <thead>
+          <tr><th>Field</th><th>What it records</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Jurisdiction and regulator</td><td>Where the obligation applies and who enforces it</td></tr>
+          <tr><td>Instrument</td><td>The law, regulation, guidance or standard, with its version</td></tr>
+          <tr><td>Status</td><td>Enacted, draft, guidance or voluntary standard</td></tr>
+          <tr><td>Applicability</td><td>Entity type, sector, use case and risk class where specified</td></tr>
+          <tr><td>Effective date</td><td>When the obligation takes effect</td></tr>
+          <tr><td>Primary source</td><td>Link to the official text, and the date accessed</td></tr>
+          <tr><td>Last checked</td><td>Date of the most recent review against the source</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="publications">
+    <div class="wrap">
+      <div class="eyebrow">Publications</div>
+      <h2>Published work</h2>
+      <p>Our first whitepaper is in preparation. Each publication will carry a version number, sources, stated limitations and a change log.</p>
+      <div class="grid">
+        <div class="card">
+          <span class="status">In preparation</span>
+          <h3>From regulation to control</h3>
+          <p>How to move from an AI obligation to a control, its evidence and a test.</p>
+        </div>
+      </div>
+      <h3>Change log</h3>
+      <table>
+        <thead>
+          <tr><th>Date</th><th>Version</th><th>Change</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>[Date]</td><td>0.1</td><td>Website and charter draft published</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="eyebrow">Contact</div>
+      <h2>Get in touch</h2>
+      <p>For membership, corrections to our publications, or to suggest a regulatory change we should track, write to us at <a href="mailto:[group-email]" style="color: var(--accent);">[group-email]</a>.</p>
+      <p>Corrections are published in the change log for the relevant document.</p>
+      <p><a href="https://www.linkedin.com/company/[linkedin-page-name]" style="color: var(--accent); font-weight: 700;">Follow us on LinkedIn</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Global AI Compliance Guild is an informal, independent practitioner group and is not a registered organisation. Content is general guidance, not legal advice.</p>
+    <p>&copy; 2026 Global AI Compliance Guild. Last updated: [date].</p>
+    <p><a href="https://www.linkedin.com/company/[linkedin-page-name]">LinkedIn</a></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var target = document.getElementById("scanner-register");
+  function show(message) {
+    target.textContent = message;
+  }
+  function row(entry) {
+    var card = document.createElement("div");
+    card.className = "card";
+    card.style.marginBottom = "14px";
+    var badge = document.createElement("span");
+    badge.className = "status";
+    badge.textContent = entry.type + " · " + entry.status;
+    card.appendChild(badge);
+    var title = document.createElement("h3");
+    title.style.marginTop = "6px";
+    title.textContent = entry.title;
+    card.appendChild(title);
+    var meta = document.createElement("p");
+    meta.style.fontSize = "14px";
+    meta.style.color = "var(--muted)";
+    meta.textContent = entry.jurisdiction + " · " + entry.body + " · published " + entry.publishedDate + (entry.effective ? " · " + entry.effective : "");
+    card.appendChild(meta);
+    var summary = document.createElement("p");
+    summary.textContent = entry.summary;
+    card.appendChild(summary);
+    if (entry.verified === false) {
+      var note = document.createElement("p");
+      note.style.fontSize = "13px";
+      note.style.color = "var(--accent)";
+      note.textContent = "Unverified scanner output, not yet reviewed";
+      card.appendChild(note);
+    }
+    var link = document.createElement("a");
+    link.href = entry.source;
+    link.style.color = "var(--accent)";
+    link.style.fontWeight = "700";
+    link.textContent = "Official source";
+    card.appendChild(link);
+    return card;
+  }
+  fetch("data/register.json")
+    .then(function (response) {
+      if (!response.ok) throw new Error("status " + response.status);
+      return response.json();
+    })
+    .then(function (data) {
+      target.textContent = "";
+      if (!data.entries || data.entries.length === 0) {
+        show("No items to show yet.");
+        return;
+      }
+      data.entries.forEach(function (entry) {
+        target.appendChild(row(entry));
+      });
+    })
+    .catch(function () {
+      show("The latest items could not be loaded. Open the site from a web server or hosted address to see them.");
+    });
+})();
+</script>
+
+</body>
+</html>

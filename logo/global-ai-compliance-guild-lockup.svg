@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" width="1000" height="300">
+  <rect width="1000" height="300" fill="#1A1A1A"/>
+  <g transform="translate(20,20) scale(0.5)">
+    <g fill="none" stroke="#FFFFFF" stroke-width="14">
+      <circle cx="256" cy="256" r="160"/>
+      <ellipse cx="256" cy="256" rx="72" ry="160" stroke-opacity="0.6"/>
+      <line x1="96" y1="256" x2="416" y2="256" stroke-opacity="0.6"/>
+    </g>
+    <polyline points="186,264 240,318 332,204" fill="none" stroke="#F5A623" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="300" y="150" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="700" fill="#FFFFFF">GLOBAL AI</text>
+  <text x="300" y="210" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="400" letter-spacing="6" fill="#F5A623">COMPLIANCE GUILD</text>
+  <rect x="300" y="236" width="660" height="4" fill="#F5A623"/>
+</svg>
